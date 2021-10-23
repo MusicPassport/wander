@@ -24,10 +24,9 @@ const App = () => {
 	const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=100&keyword=music&apikey=${'RW9cwwI0fopdanO8UIpgzYPYq0GlSavB'}`;
 
 	useEffect(() => {
-		axios.get(url).then((res) => {setEvents([...res.data['_embedded'].events])
-    return console.log(res.data)}).catch(err => console.log(err));
+		axios.get(url).then((res) => setEvents([...res.data['_embedded'].events])).catch(err => console.log(err));
 	}, []);
-
+console.log(events);
 	return (
 		<div className='App'>
 			<Nav />

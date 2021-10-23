@@ -1,0 +1,13 @@
+.event-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    height: 300px;
+    width: 300px;
+}
+
+.image {
+    max-width: 150px;
+}
