@@ -8,13 +8,10 @@
 
         text-align: center;
         -webkit-text-fill-color: transparent;
-        font-size: 60px;
+        font-size: 80px;
     }
 
-.invite {
-    grid-row: 2;
-    /* grid-column: 2; */
-}
+
 
 @media(min-width: 500px) {
     .headline {
