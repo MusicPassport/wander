@@ -5,8 +5,8 @@ import './Home.css';
 const Home = () => {
     return (
         <>
-            <h1 className="headline">Wandr</h1>
-            <Link className="invite" to="/events">Explore</Link>  
+            <h1 className="headline" >Wandr</h1>
+            <Link className="home-link" to="/events">Explore</Link>  
         </>
     );
 };
