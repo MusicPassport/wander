@@ -19,7 +19,7 @@ const App = () => {
 		events: [],
 	});
 
-	const [events, setEvents] = useState({});
+	const [events, setEvents] = useState([]);
 
 	const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=100&keyword=music&apikey=${'RW9cwwI0fopdanO8UIpgzYPYq0GlSavB'}`;
 
