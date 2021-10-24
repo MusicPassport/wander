@@ -25,6 +25,7 @@ useEffect(() => {
     if (events.length < 1) {
         getEvents()
     }
+    // eslint-disable-next-line
 }, [])
 
 if (events.length < 1) {
@@ -34,7 +35,7 @@ if (events.length < 1) {
     return (
         <div className="event-list">
                 {events.map((event) => (
-                    <Link className='link' to={`/events/${event.id}`}>
+                    <Link className='event-link' to={`/events/${event.id}`}>
                         <img className='image' src={event.images[2].url} alt="" />
                         <h2>{event.name}</h2>
                         {/* <h4>{event.dates.start.localDate}</h4> */}
