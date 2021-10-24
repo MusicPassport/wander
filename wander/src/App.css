@@ -34,7 +34,7 @@ main {
     padding: 1rem;
     display: grid;
     /* the syntax becomes a mouthful here, but what we are doing is creating REPEATING rows and columns that AUTO-FILL the browser window with as many rows/columns as possible, according to the minmax ratio and px dimensions */
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
     text-align: center;
 
     overflow: auto;
@@ -64,7 +64,7 @@ a:hover {
 }
 
 /* Down here, I've created a media query for when we are bigger than a phone */
-@media(min-width: 500px) {
+@media(min-width: 600px) {
     .App {
         grid-template-rows: 2fr 7fr 1fr;
         grid-template-columns: 1fr 8fr 1fr;
@@ -80,7 +80,7 @@ a:hover {
         grid-row: 2;
         grid-column: 1/span 3;
 
-        grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+        /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
         grid-template-columns: repeat(3, 1fr);
 
     }

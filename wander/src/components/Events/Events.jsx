@@ -2,12 +2,30 @@ import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../Utility/Context';
 import './Events.css'
+import axios from 'axios';
 
 
 const Events = () => {
 
 const {events, setEvents } = useContext(DataContext)
+
+const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=100&keyword=music&apikey=${'RW9cwwI0fopdanO8UIpgzYPYq0GlSavB'}`;
 console.log(events);
+
+const getEvents = async () => {
+    try {
+        const result = await axios.get(url)
+        setEvents(([...result.data['_embedded'].events]))
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+useEffect(() => {
+    if (!events) {
+        getEvents()
+    }
+}, [])
 
 if (!events) {
     return <h1>Loading...</h1>

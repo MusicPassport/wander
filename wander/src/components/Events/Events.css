@@ -1,13 +1,42 @@
 .event-list {
+    height: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
+.event-list::-webkit-scrollbar {
+    display: none;
+}
+
 .link {
-    height: 300px;
+    height: fit-content;
     width: 300px;
+    margin: 1rem;
+
 }
 
 .image {
     max-width: 150px;
+}
+
+
+@media (min-width: 600px) {
+
+
+    
+    .event-list {
+        
+        /* how event list is displayed (itself) */
+
+        /* in parents grid this is how I'm displayed (aka: where do I live) */
+        grid-column: 1 / span 3;  /* I live in column one and span 3 columns */
+
+        margin: 1rem; /* there is a buffer around my edges of 1 elemental unit */
+        
+        /* how does event list display its children */
+        display: grid; /* children live inside a grid */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* grid has a template for it's columns. the columns repeat at 300px */
+        gap: 5rem; /* place a gap between each child equal to 5 elemental units */
+    }    
 }
