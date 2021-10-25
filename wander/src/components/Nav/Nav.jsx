@@ -24,6 +24,8 @@ const handleClick = () => {
             {/* <Link to='/map'>Map</Link> */}
             <Link to='/about'>About</Link>
             <Link to='/events'>Events</Link>
+            <Link to='/login'>Login</Link> 
+            <Link to='/signup'>Sign Up</Link> 
             </div>
             <div className='hamburger' onClick={handleClick}>
                 <Hamburger />
@@ -34,6 +36,8 @@ const handleClick = () => {
                     {/* <Link to='/map'>Map</Link> */}
                     <Link to='/about'>About</Link>
                     <Link to='/events'>Events</Link>
+                    <Link to='/login'>Login</Link>
+                    <Link to='/signup'>Sign Up</Link>
                 </div>
             </div>
         </header>

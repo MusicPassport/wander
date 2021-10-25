@@ -94,6 +94,49 @@ main::-webkit-scrollbar {
     font-size: 2rem;
 }
 
+/* CSS for the login and sign up forms */
+
+form {
+    /* place forms in grid column 2 */
+    grid-column: 2;
+    border: 2px ridge black;
+    border-radius: 10px;
+    padding: 30px;
+
+    /* form children are using flex box */
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+/* Containers for username/password label and inputs */
+.password, .username {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Align labels to left and give space below and to the left */
+/* Have to use align instead of justify because of using flex column */
+label {
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Set height and round border */
+input {
+    height: 30px;
+    border-radius: 4px;
+}
+
+/* CSS for the buttons to login and sign up */
+.signup-login {
+    width: 70px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
 /* event links styled on Events.css */
 
 /* Down here, I've created a media query for when we are bigger than a phone */
