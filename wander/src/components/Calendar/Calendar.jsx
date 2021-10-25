@@ -3,6 +3,11 @@ import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import './Calendar.css'
 
 const Calendar = () => {
+
+    const getDate = (event) => {
+        console.log(event.target)
+
+    }
     const dateValue = new Date(
 			new Date().getFullYear(),
 			new Date().getMonth(),
@@ -27,7 +32,8 @@ const Calendar = () => {
 						value={dateValue}
 						min={minDate}
 						max={maxDate}
-						isMultiSelection={true}></CalendarComponent>
+						isMultiSelection={true}
+                        onClick={getDate}></CalendarComponent>
 				</div>
 				<div>
 					<h2>Display Events</h2>
