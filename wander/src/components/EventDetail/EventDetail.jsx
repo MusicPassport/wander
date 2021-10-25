@@ -4,34 +4,20 @@ import { DataContext } from '../../Utility/Context';
 import axios from 'axios';
 
 function EventDetail() {
-	// get the event id
 	const { id } = useParams();
-	// const id = 'Z7r9jZ1AdAV0v';
-	// get all events
 	const { events, setEvents } = useContext(DataContext);
-	const [eventDetail, setEventDetail] = useState({
-		// filter for target event
-		...events.filter((event) => event.id === id)[0],
-	});
+	const [eventDetail, setEventDetail] = useState({...events.filter((event) => event.id === id)[0]});
 
-	const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=100&keyword=music&apikey=${'RW9cwwI0fopdanO8UIpgzYPYq0GlSavB'}`;
-
-	const getEvents = async () => {
-		try {
-			const result = await axios.get(url);
-			setEvents([...result.data['_embedded'].events]);
-		} catch (error) {
-			console.log(error);
-		}
-	};
+	
 
 	useEffect(() => {
-		if (events.length < 1) {
-			getEvents();
-		}
-	}, []);
+		setEventDetail({
+			...events.filter((event) => event.id === id)[0],
+		});
+	},[])
 
-	if (events.length < 1) {
+	
+	if (JSON.stringify(eventDetail) === '{}') {
 		return <h1>Loading...</h1>
 	}
 
@@ -56,7 +42,8 @@ function EventDetail() {
 				{/* <p>Start Date: {eventDetail.start.localDate}</p> */}
 				<div className='seat-map'>
 					<img
-						src={eventDetail.seatmap.staticUrl}
+						className='event-img seat-img'
+						// src={eventDetail.seatmap.staticUrl}
 						alt={`${eventDetail.name} + seat map`}></img>
 				</div>
 			</div>

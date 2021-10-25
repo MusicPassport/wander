@@ -26,7 +26,8 @@ const App = () => {
 	useEffect(() => {
 		axios.get(url).then((res) => setEvents([...res.data['_embedded'].events])).catch(err => console.log(err));
 	}, []);
-console.log(events);
+	
+
 	return (
 		<div className='App'>
 			<Nav />
