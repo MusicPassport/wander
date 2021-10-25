@@ -11,6 +11,8 @@ import EventDetail from './components/EventDetail/EventDetail';
 import Events from './components/Events/Events';
 import Create from './components/Create/Create';
 import axios from 'axios';
+import Login from './components/Authentication/Login/Login';
+import SignUp from './components/Authentication/Sign Up/SignUp';
 
 const App = () => {
 	// const [events,setEvents] = useState([{}]);
@@ -35,6 +37,8 @@ const App = () => {
 				<DataContext.Provider value={{ events, setEvents }}>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/about' component={About} />
+					<Route exact path='/login' component={Login} />
+					<Route exact path='/signup' component={SignUp} />
 					{/* <Route exact path='/timeline' component={Timeline}/> */}
 					<Route exact path='/events/:id' component={EventDetail} />
 					<Route exact path='/events' component={Events} />
