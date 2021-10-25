@@ -13,6 +13,7 @@ import Create from './components/Create/Create';
 import axios from 'axios';
 import Login from './components/Authentication/Login/Login';
 import SignUp from './components/Authentication/Sign Up/SignUp';
+import Calendar from './components/Calendar/Calendar';
 
 const App = () => {
 	// const [events,setEvents] = useState([{}]);
@@ -43,6 +44,7 @@ const App = () => {
 					<Route exact path='/events/:id' component={EventDetail} />
 					<Route exact path='/events' component={Events} />
 					<Route exact path='/create' component={Create} />
+					<Route exact path='/calendar' component={Calendar}/>
 				</DataContext.Provider>
 			</main>
 		</div>

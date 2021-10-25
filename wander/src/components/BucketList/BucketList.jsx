@@ -31,7 +31,7 @@ const BucketList = () => {
 			<h1>Hello, {currentUser.name}</h1>
             <div>BucketList</div>
             <ul>
-            {currentUser.viewing.map(event => <li>{event}</li>
+            {currentUser.viewing.map(event => <li>{event.name}</li>
             )}
             </ul>
 		</div>
