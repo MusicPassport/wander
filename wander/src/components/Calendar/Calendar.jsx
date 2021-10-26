@@ -27,7 +27,6 @@ const Calendar = () => {
 			<div>
 				<div>
 					<h1>Calendar</h1>
-					{/* <CalendarComponent value={} min={} max={maxDate}></CalendarComponent> */}
 					<CalendarComponent
 						value={dateValue}
 						min={minDate}
