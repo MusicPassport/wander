@@ -11,6 +11,9 @@ import EventDetail from './components/EventDetail/EventDetail';
 import Events from './components/Events/Events';
 import Create from './components/Create/Create';
 import axios from 'axios';
+import Login from './components/Authentication/Login/Login';
+import SignUp from './components/Authentication/Sign Up/SignUp';
+import Calendar from './components/Calendar/Calendar';
 
 const App = () => {
 	// const [events,setEvents] = useState([{}]);
@@ -26,7 +29,8 @@ const App = () => {
 	useEffect(() => {
 		axios.get(url).then((res) => setEvents([...res.data['_embedded'].events])).catch(err => console.log(err));
 	}, []);
-console.log(events);
+	
+
 	return (
 		<div className='App'>
 			<Nav />
@@ -34,10 +38,13 @@ console.log(events);
 				<DataContext.Provider value={{ events, setEvents }}>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/about' component={About} />
+					<Route exact path='/login' component={Login} />
+					<Route exact path='/signup' component={SignUp} />
 					{/* <Route exact path='/timeline' component={Timeline}/> */}
 					<Route exact path='/events/:id' component={EventDetail} />
 					<Route exact path='/events' component={Events} />
 					<Route exact path='/create' component={Create} />
+					<Route exact path='/calendar' component={Calendar}/>
 				</DataContext.Provider>
 			</main>
 		</div>
