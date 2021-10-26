@@ -9,4 +9,9 @@
     height:100%;
 }
 
-
+.btn {
+    background-color: black;
+    color:white;
+    margin: 10px 5px;
+    
+}
