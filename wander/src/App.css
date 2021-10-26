@@ -58,6 +58,7 @@ main::-webkit-scrollbar {
     font-size: 30px;
     font-weight: 500;
     text-align: center;
+    grid-column: 2;
 }
 
 .home-link:hover {
@@ -73,7 +74,8 @@ main::-webkit-scrollbar {
     height: 300px;
     /* width: 100vw; */
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
     justify-content: space-between;
     padding: 1rem;
     margin: .3rem;
@@ -83,6 +85,12 @@ main::-webkit-scrollbar {
     text-decoration: none;
     color: gray;
     font-size: 2rem;
+    border-bottom: 2px solid black;
+    font-size: 1.7rem;
+}
+
+.linkDisplay a:hover {
+    background-color: lightgray;
 }
 
 .home-link {
@@ -166,5 +174,9 @@ input {
     .links {
         display: contents;
         font-size: 30px;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
