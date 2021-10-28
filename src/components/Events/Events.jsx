@@ -11,7 +11,9 @@ const Events = () => {
     const { searchInputs, setSearchInputs } = useContext(DataContext);
     const [isOpen, setIsOpen] = useState(false);
     
-    let keyword = searchInputs.keyword ? `&keyword=${encodeURIComponent(searchInputs.keyword)}`:""; 
+    let keyword = searchInputs.keyword
+			? `&keyword=${encodeURIComponent(searchInputs.keyword)}`
+			: '&keyword=music'; 
     let postalCode = searchInputs.postalCode ? `&postalCode=${encodeURIComponent(searchInputs.postalCode)}`:"";
     let city = searchInputs.city ? `&city=${encodeURIComponent(searchInputs.city)}` : "";
     let state= searchInputs.stateCode ? `&stateCode=${encodeURIComponent(searchInputs.stateCode)}`:"";

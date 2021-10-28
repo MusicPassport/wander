@@ -22,6 +22,7 @@ import ResetEmail from './components/Authentication/Reset/ResetEmail';
 import Timeline from './components/Timeline/Timeline';
 import Memories from './components/Memories/Memories';
 import Seen from './components/Seen/Seen';
+import Discover from './components/Discover/Discover';
 
 
 
@@ -99,6 +100,7 @@ const App = () => {
 
 
 					<Route exact path='/seen' component={Seen} />
+					<Route exact path='/discover' component={Discover}/>
 
 				</DataContext.Provider>
 			</main>
