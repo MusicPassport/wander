@@ -76,7 +76,7 @@ const Dashboard = () => {
 
 
     return (
-        <>
+        <div className='dashboard-page' >
             <section className="dashboard-buttons">
                <DashNav />
                <DateRange
@@ -91,7 +91,7 @@ const Dashboard = () => {
             <Route exact path='/dashboard/memories' render={() => <Memories setCurrentMemory={setCurrentMemory} /> } />
             <Route exact path='/dashboard/memories/:id' render={() => <MemoryDetail currentMemory={currentMemory} /> } />
 
-        </>
+        </div>
            
     )
 };

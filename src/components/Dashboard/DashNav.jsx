@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../css/DashNav.css'
 
 const DashNav = () => {
     return (
         <div className="dash-nav">
             <Link className="dashboard-btn" name='settings' to="/dashboard/settings">
-                Profile Settings
+                Settings
             </Link>
             <Link className="dashboard-btn" name='timeline' to="/dashboard/timeline">
                     Time Line

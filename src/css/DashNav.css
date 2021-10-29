@@ -1,0 +1,10 @@
+@media (min-width: 600px) {
+  .dash-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=DashNav.css.map */

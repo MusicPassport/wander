@@ -1,5 +1,7 @@
+@import '../Variables';
+
 .hidden {
-  display: none;
+    display: none
 }
 
 .link {
@@ -57,7 +59,10 @@
   padding: 0;
 }
 
+
 @media (min-width: 600px) {
+
+
   .links {
     display: contents;
     font-size: 30px;
@@ -67,5 +72,3 @@
     display: none;
   }
 }
-
-/*# sourceMappingURL=Nav.css.map */

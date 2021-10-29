@@ -1,2 +1,18 @@
-@import '../_Variables'
+@import '../_Variables';
 
+@media (prefers-color-scheme: dark) {
+
+    .dashboard-btn {
+        color: $white-smoke;
+        text-decoration: underline $magenta;
+    }
+    .dashboard-btn:hover{
+    background: $purple;
+}
+
+}
+
+main {
+    height: 100vh;
+
+}

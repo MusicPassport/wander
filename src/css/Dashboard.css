@@ -25,6 +25,34 @@
   margin: 1rem auto;
 }
 
+@media (min-width: 600px) {
+  .dashboard-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .personal-calendar {
+    grid-column: 3;
+    grid-row: 1/span 2;
+  }
+
+  .personal-memories {
+    grid-column: 1/span 2;
+  }
+
+  .dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rdrCalendarWrapper {
+    margin-top: 20px;
+    align-self: center;
+    width: 30%;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .dashboard-btn {
     color: whitesmoke;
@@ -33,16 +61,6 @@
 
   .dashboard-btn:hover {
     background: #553772;
-  }
-}
-@media (min-width: 600px) {
-  .personal-calendar {
-    grid-column: 3;
-    grid-row: 1/span 2;
-  }
-
-  .personal-memories {
-    grid-column: 1/span 2;
   }
 }
 

@@ -117,7 +117,7 @@ const App = () => {
 					<Route exact path='/dashboard/bucketlist' component={BucketList} />
 					<Route
 						exact
-						path='/dashboard/timeline'
+						path='/dashboard'
 						render={() => <Timeline dateRange={dateRange} />}
 					/>
 					<Route

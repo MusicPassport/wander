@@ -1,3 +1,15 @@
-body {
-    background-color: rgb(29, 26, 26);
+@media (prefers-color-scheme: dark) {
+  .dashboard-btn {
+    color: whitesmoke;
+    text-decoration: underline #8f3b76;
+  }
+
+  .dashboard-btn:hover {
+    background: #553772;
+  }
 }
+main {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=styles.css.map */
