@@ -79,7 +79,7 @@ const Memories = ( { setCurrentMemory } ) => {
 
 return (
 	<div>
-		<button onClick={() => history.goBack()}>←</button>
+		<button className="btn detail-btn backButton" onClick={()=> history.goBack()}>←</button>
 		<div className='section-title'>
 			<h1>{memories.length ? 'Your Memories' : 'No memories yet'}</h1>
 			<button className='btn add-memory' onClick={toggleMem}>
