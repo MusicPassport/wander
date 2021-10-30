@@ -9,7 +9,13 @@ $dark-gray: rgb(23, 23, 23, 1);
 $white-smoke: rgba(245, 245, 245, 1);
 $white-smoke-fade: rgba(245, 245, 245, 0.2);
 $link-size: 2rem;
-$link-border: solid 2px $hot-pink;
+$link-border: solid 10px $hot-pink;
 $border: 0.2rem solid $hot-pink;
 $borderRadius: 10px;
 $box-shadow: 10px 5px 5px black;
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: rgba(23, 23, 23, 1);
+	}
+}
