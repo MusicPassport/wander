@@ -17,6 +17,9 @@ const DashNav = () => {
             <Link className="dashboard-btn" name='bucketlist' to="/dashboard/bucketlist">
                     Bucket List
             </Link>
+            <Link className="dashboard-btn" name='seen' to="/seen">
+                    Passport
+            </Link>
         </div>
     );
 };
