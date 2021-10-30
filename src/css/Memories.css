@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Satisfy&family=Seaweed+Script&family=Zen+Kurenaido&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap");
 .memory-options {
   display: flex;
   justify-content: space-between;
@@ -200,9 +199,7 @@
   margin: 5px 5px;
 }
 
-
 .form-title, .form-input {
-
   border: none;
   border-bottom: 5px solid #270815;
   /* border-radius: 10px; */
@@ -213,9 +210,7 @@
   border-radius: 20px;
 }
 
-
 textarea, input {
-
   font-size: 20px;
   color: white;
   background-color: #464444;
@@ -257,8 +252,7 @@ select {
   justify-content: center;
 }
 
-.submit,
-.cancel {
+.submit, .cancel {
   width: 30%;
   margin: 0 20px;
 }
@@ -274,9 +268,6 @@ input[type=file]::file-selector-button {
 
 h2 {
   color: #f5487f;
-
-  /* background-color: azure; */
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -360,3 +351,6 @@ h2 {
     color: #f5487f;
   }
 }
+
+
+/*# sourceMappingURL=Memories.css.map */

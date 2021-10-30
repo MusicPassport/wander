@@ -1,80 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap");
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  max-width: 100%;
-  background: rgba(245, 245, 245, 0.2);
-}
-
 .dashboard-buttons {
-  background: rgba(245, 245, 245, 0.2);
   display: inline-flex;
   border: none;
   text-decoration: none;
 }
 
-#cal-btn {
-  z-index: 1;
-  display: block;
-  height: 80px;
-  width: 80px;
-  bottom: 40px;
+.dashboard-btn {
+  width: 120px;
+  height: 30px;
   border: none;
-  border-radius: 100%;
-  background-image: url("../assets/cal-icon.jpeg");
-  background-size: cover;
-  background-color: #c7417b;
+  background: none;
+  font-size: 0.72em;
+  text-decoration: underline #1f306e;
 }
 
-@keyframes expand {
-  from {
-    scale: 0;
-  }
-  to {
-    transform: rotate(25deg);
-    scale: 1;
-  }
+.dashboard-btn:hover {
+  background: lightgray;
 }
-@-webkit-keyframes expand {
-  from {
-    scale: 0;
+
+.date-picker {
+  margin-top: 20px;
+}
+
+.personal-calendar {
+  margin: 1rem auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-btn {
+    color: whitesmoke;
+    text-decoration: underline #8f3b76;
   }
-  to {
-    transform: rotate(25deg);
-    scale: 1;
+
+  .dashboard-btn:hover {
+    background: #553772;
   }
 }
 @media (min-width: 600px) {
-  .dashboard-buttons {
-    width: 100%;
-    grid-row: 1;
+  .personal-calendar {
+    grid-column: 3;
+    grid-row: 1/span 2;
+  }
+
+  .personal-memories {
     grid-column: 1/span 2;
-    justify-content: right;
-  }
-
-  .dashboard {
-    display: grid;
-    grid-template-rows: 1fr/7fr;
-    grid-template-columns: 1fr 5fr;
-    gap: 1rem;
-    background: url("../assets/Adobe_lantern.jpeg");
-    background-size: cover;
-  }
-
-  #cal-btn {
-    display: none;
-  }
-
-  .calendar {
-    margin-top: 1rem;
-    grid-row: 2;
-    grid-column: 1;
-    width: 80%;
-    display: flex;
-    animation-name: expand;
-    animation-duration: 2s;
   }
 }
+/*# sourceMappingURL=Dashboard.css.map */
 
 /*# sourceMappingURL=Dashboard.css.map */

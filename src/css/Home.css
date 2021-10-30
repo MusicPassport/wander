@@ -1,15 +1,60 @@
-
+.landing-page {
+    background-image: url('../assets/wandr.jpg');
+    background-size: cover;
+    width: 100vw;
+    height:100vh;
+    background-color:rgba(8, 0, 0, 0.815);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
 .headline {
+        /* margin: auto; */
         grid-row: 1;
-
         background: url(https://media.giphy.com/media/YSlmPfN7Ptvqg/giphy.gif);
-        background-size: cover;
+        background-size: 100px;
         background-clip: text;
-
-        text-align: center;
+        heigth:100px;
+        font-family: 'Raleway', sans-serif;
+        text-align:center;
         -webkit-text-fill-color: transparent;
         font-size: 80px;
+        text-shadow: 10px 10px rgba(255, 255, 255, 0.692);
     }
+
+.typing-container {
+    color:rgb(243, 243, 243);
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+
+}
+
+.typing {
+    text-shadow: 5px 5px rgba(58, 7, 43, 0.5);
+}
+
+.home-link-container, .home-link {
+    margin:20px auto;
+    font-size: 40px;
+    
+    padding:10px;
+    border-radius: 20px;
+    background-color:rgba(199, 65, 123, 1);
+    color:white;
+
+
+}
+
+.home-link:hover {
+    color:rgba(199, 65, 123, 1);
+    background-color: rgb(206, 188, 196);
+}
+
+
+
 
 
 
