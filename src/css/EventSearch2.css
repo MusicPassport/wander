@@ -1,0 +1,89 @@
+.form-container {
+  height: 500px;
+  width: 700px;
+  /* border: 2px solid hotpink; */
+  display: flex;
+  flex-direction: row;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 15px 15px black;
+  background-image: linear-gradient(#1f306e, #f5487f);
+}
+
+.signup-form {
+  height: 600px;
+}
+
+.auth-img {
+  object-fit: cover;
+  height: 101%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.auth-form {
+  /* margin-left:20px; */
+  border-radius: none;
+  padding: 10px 100px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form > * {
+  margin: 10px 0;
+}
+
+.auth-label {
+  color: #ebecf1;
+  font-family: "Raleway", sans-serif;
+}
+
+.auth-input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #1f306e;
+  margin-top: 20px;
+}
+
+.auth-title, .auth-form-title, .auth-input, .redirect-user {
+  background-color: #2e292b;
+  width: max-content;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 80px auto;
+  box-shadow: 15px 15px black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.auth-form-title, .auth-input {
+  margin: 20px auto;
+  background-color: #c7417b;
+  box-shadow: 10px 10px black;
+}
+
+.auth-form-title {
+  width: 50%;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.auth-input {
+  padding: 10px;
+  width: 260px;
+  background-color: #171717;
+}
+
+.signup-login {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  background-color: #1f306e;
+  box-shadow: 10px 10px black;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=EventSearch2.css.map */

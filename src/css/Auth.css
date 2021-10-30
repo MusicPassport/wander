@@ -1,5 +1,5 @@
 .form-container {
-    height:67%;
+    height:500px;
     width:700px;
     /* border: 2px solid hotpink; */
     display: flex;
@@ -11,10 +11,14 @@
 
 }
 
+.signup-form {
+    height: 600px;
+}
+
 .auth-img {
-    object-fit: contain;
+    object-fit: cover;
     height:101%;
-    width:81%;
+    width:100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -33,18 +37,55 @@
 }
 
 .auth-label {
-    color:rgba(31, 48, 110, 1);
+    color:rgb(235, 236, 241);
+    font-family: 'Raleway', sans-serif;
 
 }
 
-.signup-form > * {
-    margin: 5px 0;
-
-}
 
 .auth-input {
     border:none;
     background-color: transparent;
     border-bottom: 2px solid rgba(31, 48, 110, 1);
     margin-top: 20px;
+}
+
+.auth-title, .auth-form-title, .auth-input, .redirect-user {
+    background-color: rgb(46, 41, 43);
+    width: max-content;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 80px auto;
+    box-shadow: 15px 15px black;
+    color:white;
+    font-family: 'Raleway', sans-serif;;
+}
+
+.auth-form-title, .auth-input {
+    margin: 20px auto;
+    background-color: rgba(199, 65, 123, 1);
+    box-shadow: 10px 10px black;
+
+}
+
+.auth-form-title {
+    width: 50%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.auth-input {
+    padding: 10px;
+    width: 260px;
+    background-color: rgba(23, 23, 23, 1);
+}
+
+.signup-login {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    background-color: rgba(31, 48, 110, 1);;
+    box-shadow: 10px 10px black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }

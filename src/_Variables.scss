@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Satisfy&family=Seaweed+Script&family=Zen+Kurenaido&display=swap');
 
 $navy: rgba(31, 48, 110, 1);
 $purple: rgba(85, 55, 114, 1);
@@ -12,10 +12,4 @@ $link-size: 2rem;
 $link-border: solid 10px $hot-pink;
 $border: 0.2rem solid $hot-pink;
 $borderRadius: 10px;
-$box-shadow: 10px 5px 5px black;
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: rgba(23, 23, 23, 1);
-	}
-}
+$box-shadow: 10px 5px 5px black; 

@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main style file
+// import '../../css/Calendar.css';
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
 const AltCalendar = ({dateRange, setDateRange}) => { 

@@ -102,8 +102,11 @@ const BucketList = () => {
 
 	return (
 		<div>
+            <div className="topImageContainer">
+                <img className="topImage" src="https://wallpapermemory.com/uploads/223/hot-air-balloon-background-full-hd-1080p-478513.jpg" alt="" />
+            </div>
             <div  className="BLPage">
-            <button className="btn detail-btn backButton" onClick={()=> history.goBack()}>←</button>
+            <button className="backButton" onClick={()=> history.goBack()}>←</button>
 			{/* <h3 className="greeting">Hey, {currentUser.username}!</h3> */}
             <h1 className="bucketListTitle">BucketList</h1>
             <div className="bucket-event-list">
@@ -118,9 +121,9 @@ const BucketList = () => {
                     <h4>{event.start}</h4>
                     <h4>{event.venue}</h4>
                     <a href={event.tm_url}>Get your tickets here!</a>
-                    <button className='btn detail-btn' onClick={removeFromBucket} id={event.id}>Remove from Bucketlist</button>
+                    <button className='btn detail-btn bucketButton' onClick={removeFromBucket} id={event.id}>Remove from Bucketlist</button>
                     <button
-						className='btn detail-btn seen'
+						className='btn detail-btn seen bucketButton'
 						id={event.id}
 						onClick={addEvent}>
 						Add To Attending

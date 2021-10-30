@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Satisfy&family=Seaweed+Script&family=Zen+Kurenaido&display=swap");
+@media (prefers-color-scheme: dark) {
+  .timeline {
+    color: whitesmoke;
+  }
+}
+.timeline {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  67% {
+    margin-left: -0.5%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  67% {
+    margin-left: -0.5%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.timeline-title {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  font-family: "Dancing Script";
+  text-align: left;
+  animation-name: slidein;
+  animation-duration: 3s;
+}
+
+.timeline-link {
+  border: solid black 1px;
+  margin: 1rem;
+  padding: 0 1rem;
+  height: 230px;
+  width: 200px;
+  background: whitesmoke;
+  box-shadow: 10px 5px 5px black;
+  animation-name: slideup;
+  animation-duration: 4s;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.timeline-link:hover {
+  transform: scale(1.05);
+  transition: ease 0.3s;
+}
+
+.timeline-event-title {
+  margin-top: 1rem;
+  color: #c7417b;
+}
+
+.timeline-img {
+  border-radius: 0.4rem;
+}
+
+.timeline-date {
+  text-align: right;
+  font-size: 12px;
+  color: #f5487f;
+}
+
+@media (min-width: 600px) {
+  .timeline {
+    height: 600px;
+    grid-column: 2;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 7fr;
+    justify-content: center;
+  }
+
+  .timeline-title {
+    grid-row: 1;
+    grid-column: 1/-1;
+  }
+}
+
+/*# sourceMappingURL=Timeline.css.map */

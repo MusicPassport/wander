@@ -9,10 +9,10 @@ import DashNav from './DashNav';
 import { DateRange } from 'react-date-range'; // new Date Range component. Also run: npm i date-fns
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import AltCalendar from '../Calendar/altCalendar';
+import Timeline from '../Timeline/Timeline';
 
-const Dashboard = ( { setDateRange }) => {
-    const [displaySettings, setDisplaySettings] = useState('memories');
+const Dashboard = ( { dateRange, setDateRange }) => {
+    const [displaySettings, setDisplaySettings] = useState(window.screen.width > 600 ? 'flex' : 'none');
     // const [dateRange,setDateRange] = useState();
     // const [currentMemory, setCurrentMemory] = useState({
     //     title: '',
@@ -69,23 +69,38 @@ const Dashboard = ( { setDateRange }) => {
     // console.log(dateRange);
   }
 
+const handleCal = () => {
+    if(displaySettings === 'none') setDisplaySettings('flex');
+    else setDisplaySettings('none');
+    console.log(displaySettings);
+}
+
 
     return (
         <>
-            <section className="dashboard-buttons">
+        <div className="dashboard">
+        <section className="dashboard-buttons">
                <DashNav />
+            </section>
+            <button id="cal-btn" onClick={ handleCal}></button>
+            {displaySettings === 'flex' ? (
+            <section className='calendar'>
                <DateRange
-                scroll={{enabled: true}}
+                scroll={{enabled: false}}
+                showDateDispay={false}
                 ranges={[selection]}
                 onChange={handleSelect}
-            />
+                />
             </section>
+            ) : ( null) }            
+            <Timeline className="timeline" dateRange={dateRange} />
             {/* <Route exact path='/dashboard/settings' component={ResetPassword}/>
             <Route exact path='/dashboard/bucketlist' component={BucketList}/>
             <Route exact path='/dashboard/timeline' render={() => <Timeline dateRange={dateRange}/> } />
             <Route exact path='/dashboard/memories' render={() => <Memories setCurrentMemory={setCurrentMemory} /> } />
             <Route exact path='/dashboard/memories/:id' render={() => <MemoryDetail currentMemory={currentMemory} /> } /> */}
 
+        </div>
         </>
            
     )

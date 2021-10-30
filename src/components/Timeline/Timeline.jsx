@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {DataContext} from '../../Utility/Context';
 import {DashContext} from '../../Utility/Context'
 import { useHistory } from 'react-router';
+import '../../css/Timeline.css';
 
 const Timeline = ( { dateRange } ) => {
     const history = useHistory();
@@ -85,23 +86,24 @@ const Timeline = ( { dateRange } ) => {
         }
         getMashup();
         console.log('timeline: ',timeline);
-    }, []);
+    }, [dateRange]);
 
 
 return (
-	<div>
-		<button onClick={() => history.goBack()}>←</button>
-		<h1>{timeline.length ? 'Hello from Timeline' : 'No timeline yet'}</h1>
+    <>
+	<div className="timeline">
+		<h1 className='timeline-title'>{timeline.length ? 'Go make some memories' : 'No timeline yet'}</h1>
+		{/* <button onClick={() => history.goBack()}>←</button> */}
 		{timeline.length ? (
 			timeline.map((event) => {
 				return (
 					<Link
-						className='event-link'
+						className='timeline-link'
 						key={event.id}
 						to={`/events/${event.id}`}>
-						<h2>{event.name}</h2>
-						<img src={event.img_url} style={{ width: '100%' }} alt='alt' />
-						<p>{event.start}</p>
+                        <p className="timeline-date">{event.start}</p>
+                        <img  className='timeline-img' src={event.img_url} style={{ width: '100%' }} alt='alt' />
+						<h5 className="timeline-event-title">{event.name.length > 30 ? `${event.name.substring(0, 31).concat('...')}` : event.name }</h5>
 					</Link>
 				);
 			})
@@ -109,6 +111,7 @@ return (
 			<h1>No Events yet!</h1>
 		)}
 	</div>
+    </>
 );
 }
 

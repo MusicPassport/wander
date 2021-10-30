@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { DataContext } from './Utility/Context';
 import './css/styles.css';
-import './css/EventSearch.css'
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -114,7 +113,7 @@ const App = () => {
 					<Route 
 					exact 
 					path='/dashboard' 
-					render={() => < Dashboard setDateRange={setDateRange} /> } />
+					render={() => < Dashboard dateRange={dateRange} setDateRange={setDateRange} /> } />
 
 
 					<Route path='/discover' component={Discover} />
@@ -122,11 +121,11 @@ const App = () => {
 					<Route exact path='/seen' component={Seen} />
 					<Route exact path='/dashboard/settings' component={ResetPassword} />
 					<Route exact path='/dashboard/bucketlist' component={BucketList} />
-					<Route
+					{/* <Route
 						exact
 						path='/dashboard'
 						render={() => <Timeline dateRange={dateRange} />}
-					/>
+					/> */}
 					<Route
 						exact
 						path='/dashboard/memories'

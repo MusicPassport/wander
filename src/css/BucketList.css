@@ -1,12 +1,30 @@
-.backButton, .advancedSearchButton {
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap");
+.backButton,
+.advancedSearchButton {
+
   background-color: rgba(0, 0, 0, 0);
   color: #553772;
   text-decoration: underline #8f3b76;
   padding: 0.02rem 0.4rem 0.3rem 0.4rem;
   font-size: 1.5rem;
   border-radius: 10px;
-  height: 2rem;
   margin: 3px;
+}
+
+.btn {
+  margin: 10px 5px;
+  border: 2px solid #241e24;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #231E23;
+  color: white;
+}
+
+.btn:hover {
+  border: 2px solid #39A6A3;
+  background-color: transparent;
+  color: #39A6A3;
 }
 
 .advancedSearchButton {
@@ -19,18 +37,21 @@
   justify-content: space-between;
 }
 
-.backButton:hover, .advancedSearchButton:hover {
+.backButton:hover,
+.advancedSearchButton:hover {
   box-shadow: inset 0 0 100px 100px rgba(245, 72, 127, 0.7);
 }
 
 .BLPage {
   padding: 1rem;
   font-family: "Zen Kurenaido", sans-serif;
-  background-color: #eeecec;
 }
 
 .bucketListTitle {
   font-family: "Raleway", sans-serif;
+  width: 90vw;
+  border-bottom: 3px solid #f5487f;
+  animation: flyin 1.2s ease forwards;
 }
 
 .greeting {
@@ -39,12 +60,15 @@
 }
 
 .blEvent {
-  border: 0.2rem solid #f5487f;
+  border: 0.2rem solid #1f306e;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
   margin: 0.2rem;
-  box-shadow: 10px 5px 5px black;
+  transform: scaleY(1);
+  transform: scaleX(1);
+  transition: transform 0.7s ease-in-out;
+  background-color: #171717;
 }
 
 .blEvent a {
@@ -53,11 +77,19 @@
 }
 
 .blEvent:hover {
-  box-shadow: inset 100px 100px 100px 100px rgba(245, 245, 245, 0.377);
+  box-shadow: 8px 8px 8px #f5487f;
+  /* transform: scaleX(1.1); */
+  /* box-shadow: 10px 10px white; */
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  color: #f5487f;
 }
 
 .blImage {
-  box-shadow: inset 100px 100px 100px 100px whitesmoke;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: black;
 }
 
 .bucket-event-list {
@@ -65,10 +97,28 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
+  margin: 2rem auto;
+  padding: 2rem;
+  justify-items: center;
 }
 
 .event-list::-webkit-scrollbar {
   display: none;
+}
+
+.topImageContainer, .blEvent {
+  object-fit: cover;
+  -webkit-animation: expand 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: expand 1s;
+  /* Firefox < 16 */
+  -ms-animation: expand 1s;
+  /* Internet Explorer */
+  -o-animation: expand 1s;
+  /* Opera < 12.1 */
+  animation: expand 1.5s;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
 }
 
 .event-link {
@@ -77,10 +127,36 @@
   margin: 1rem;
 }
 
-.image {
+.bucketButton {
+  background-color: #1f306e;
+}
+
+.topImageContainer {
+  height: 300px;
+  width: 100vw;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes expand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.topImage {
+  content: cover;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 300px;
+  object-fit: none;
 }
 
 @media (min-width: 600px) {
@@ -98,6 +174,26 @@
     /* grid has a template for it's columns. the columns repeat at 300px */
     gap: 2rem;
     /* place a gap between each child equal to 5 elemental units */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .blEvent:hover {
+    box-shadow: 8px 8px 8px whitesmoke;
+    color: #f5487f;
+  }
+
+  .blEvent {
+    border-radius: 5px;
+    border: solid 3px #f5487f;
+    height: 500px;
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    flex-grow: 1 0 33%;
+  }
+
+  .bucketButton {
+    background-color: #8f3b76;
   }
 }
 

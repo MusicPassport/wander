@@ -1,9 +1,8 @@
 import { Link, Redirect } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react'
 import { DataContext } from '../../Utility/Context.jsx';
+import '../../css/EventSearch.css'
 
-
-import '../../css/Events.css'
 
 
 import Select from 'react-select'
@@ -112,42 +111,57 @@ const EventSearch = ({ isOpen , setIsOpen }) => {
     )
     return (
 <div className="advancedSearch" >  
-            <h2>What would you like to find?</h2>  
+            <h2 className="formTitle">What would you like to find?</h2>  
             <form  className="searchFields" onSubmit={handleSubmit}>
                 <div className="keyword">
-                <label className="row1col1" htmlFor="label">Keyword</label>
-                    <input className="row1col2"id="keyword" type='text' 
+                <label className="searchLabel" htmlFor="label">Keyword</label>
+                    <input className="row1col2 formInput"id="keyword" type='text' 
                         placeholder="event name, type of event, etc."
                         onChange={handleChange} 
                         value={searchInputs.keyword}/>
                 </div>
                 <div className="startDate">
-                <label className="row2col1">Start Date</label>
-                    <input className="row2col2" id="startDateTime" 
+                <label className="searchLabel">Start Date</label>
+                    <input className="row2col2 formInput" id="startDateTime" 
                         type='date' 
                         placeholder="Start Date"
                         onChange={handleChange} 
                         value={searchInputs.startDateTime}/>
                 </div>
                 <div className="endDate">
-                <label className="row3col1">End Date</label>
-                    <input className="row3col2" id="endDateTime" 
+                <label className="searchLabel">End Date</label>
+                    <input className="row3col2 formInput" id="endDateTime" 
                         type='date'
                         placeholder="End Date " 
                         onChange={handleChange} 
                         value={searchInputs.endDateTime }/>
                 </div>
                 <div className="city">
-                <label className="row4col1">City</label>
-                    <input className="row4col2" id="city" 
+                <label className="searchLabel">City</label>
+                    <input className="row4col2 formInput" id="city" 
                         placeholder="city"
                         type='text' 
                         onChange={handleChange} 
                         value={searchInputs.city }/>
                 </div>
                 <div className="state">
-                <label className="row5col1">State</label>
-                    <Select id="stateCode" className="row5col2" onChange={handleChange} options={stateOptions} default=""/>
+                <label className="searchLabel">State</label>
+                    <Select id="stateCode" 
+                        className="row5col2 formInput" 
+                        onChange={handleChange} 
+                        options={stateOptions} 
+                        default=""
+                        theme={(theme) => ({
+                            ...theme,
+                            borderRadius: 10,
+                            colors: {
+                                ...theme.colors,
+                                primary25: 'hotpink',
+                                primary: 'black',
+                                neutral0: 'rgb(46, 41, 43)',
+
+                            }})}
+                        />
                 </div>
             </form>
             <Link to="/events">

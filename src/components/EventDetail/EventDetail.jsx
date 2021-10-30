@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { DataContext } from '../../Utility/Context';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../../css/EventDetail.css';
+
 import { useHistory } from 'react-router';
 
 function EventDetail() {

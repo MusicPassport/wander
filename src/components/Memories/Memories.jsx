@@ -4,7 +4,7 @@ import { backendAPI} from '../../Utility/Config';
 import {DataContext, DashContext} from '../../Utility/Context';
 import axios from 'axios';
 
-import '../../css/Memories.css';
+import '../../css/Memories.css'
 
 const Memories = ( { setCurrentMemory } ) => {
     const {currentUser} = useContext(DataContext);
