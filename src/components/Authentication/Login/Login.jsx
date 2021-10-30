@@ -70,7 +70,7 @@ const Login = () => {
 				<div className='auth-img-container'>
 					<img className='auth-img' src={loginPic}></img>
 				</div>
-				<form className='auth-form signup-form' onSubmit={handleSubmit}>
+				<form className='auth-form login-form' onSubmit={handleSubmit}>
 					<h2 className='auth-form-title'>Login</h2>
 					<div className='username'>
 						<input
