@@ -55,37 +55,42 @@ const captureUsername = (e) => {
 // }
     return (
 			<>
-				<div className='form-container'>
+				<h1 className='auth-title'>Wandr The World</h1>
+				<div className='form-container signup-form'>
 					<div className='auth-img-container'>
 						<img className='auth-img' src={signUpPic}></img>
 					</div>
 					<form className='auth-form' onSubmit={createUser}>
-						<h2>Sign Up</h2>
+						<h2 className='auth-form-title'>Sign Up</h2>
 						<div className='username'>
-							<label htmlFor=''>Username:</label>
+							<label className='auth-label' htmlFor='email'>
+								Email:
+							</label>
 							<input
 								className='auth-input signUp'
 								type='text'
-								placeholder=' e.g. myaddress@email.com'
+								placeholder='enter email'
 								onChange={captureUsername}
 							/>
 						</div>
 						<div className='password'>
-							<label htmlFor=''>Password:</label>
+							<label className='auth-label' htmlFor='password'>
+								Password:
+							</label>
 							<input
-								className='auth-input'
+								className='auth-input signUp'
 								type='password'
-								className='new-password'
 								placeholder=' enter password'
 								onChange={capturePassword}
 							/>
 						</div>
 						<div className='password '>
-							<label htmlFor=''>Confirm Password:</label>
+							<label className='auth-label' htmlFor='confirm password'>
+								Confirm Password:
+							</label>
 							<input
 								className='auth-input'
 								type='password'
-								className='confirm-password'
 								placeholder=' enter password'
 								onChange={confirmPassword}
 							/>
@@ -96,9 +101,9 @@ const captureUsername = (e) => {
 					</form>
 				</div>
 				<div className='redirect-user'>
-					<p>Already have an account? Login!</p>
-					<Link to='/login'>
-						<button>Login</button>
+					<p className='redirect-info'>Already Have An Account? Login</p>
+					<Link to='/signup'>
+						<button className='btn signup-login redirect-btn'>Login</button>
 					</Link>
 				</div>
 			</>

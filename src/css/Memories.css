@@ -278,7 +278,7 @@ input[type=file]::file-selector-button {
 
 h2 {
   color: #f5487f;
-  background-color: azure;
+  /* background-color: azure; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -363,5 +363,6 @@ h2 {
     color: #f5487f;
   }
 }
+
 
 /*# sourceMappingURL=Memories.css.map */

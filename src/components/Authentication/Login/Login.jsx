@@ -65,18 +65,17 @@ const Login = () => {
 
 	return (
 		<>
-			<h1>Welcome Back</h1>
+			<h1 className='auth-title'>Welcome Back</h1>
 			<div className='form-container'>
 				<div className='auth-img-container'>
 					<img className='auth-img' src={loginPic}></img>
 				</div>
 				<form className='auth-form signup-form' onSubmit={handleSubmit}>
-					<h2>Login</h2>
+					<h2 className='auth-form-title'>Login</h2>
 					<div className='username'>
-						<label className='auth-label'>Email</label>
 						<input
 							type='text'
-							placeholder=' e.g. myaddress@email.com'
+							placeholder='enter email'
 							onChange={captureEmail}
 							className='auth-input'
 						/>
@@ -95,9 +94,9 @@ const Login = () => {
 				</form>
 			</div>
 			<div className='redirect-user'>
-				<p>New? Sign Up!</p>
+				<p className='redirect-info'>New? Sign Up!</p>
 				<Link to='/signup'>
-					<button>SignUp</button>
+					<button className='btn signup-login redirect-btn'>SignUp</button>
 				</Link>
 			</div>
 		</>
