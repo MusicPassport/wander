@@ -1,3 +1,4 @@
+
 @import '../_Variables.scss';
 
 // font-family: 'Raleway', sans-serif;
@@ -5,8 +6,10 @@
 
 .advancedSearch {
 	font-family: 'Zen Kurenaido', sans-serif;
+
+	background-color: $white-smoke;
 	width: 80vw;
-	border: 2px solid hotpink;
+	border: 2px solid $hot-pink;
 
 	margin: 50px auto;
 	border-radius: 20px;
@@ -151,6 +154,7 @@
 	}
 	.searchFields {
 		display: flex;
+
 		flex-direction: row;
 		flex-wrap: wrap;
 		// grid-template-columns: 2fr 4fr;
@@ -190,5 +194,6 @@
 
 		// max-width: 11rem;
 	}
+
 
 }

@@ -200,7 +200,9 @@
   margin: 5px 5px;
 }
 
+
 .form-title, .form-input {
+
   border: none;
   border-bottom: 5px solid #270815;
   /* border-radius: 10px; */
@@ -211,7 +213,9 @@
   border-radius: 20px;
 }
 
+
 textarea, input {
+
   font-size: 20px;
   color: white;
   background-color: #464444;
@@ -253,7 +257,8 @@ select {
   justify-content: center;
 }
 
-.submit, .cancel {
+.submit,
+.cancel {
   width: 30%;
   margin: 0 20px;
 }
