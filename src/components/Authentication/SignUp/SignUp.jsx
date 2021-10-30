@@ -102,7 +102,7 @@ const captureUsername = (e) => {
 				</div>
 				<div className='redirect-user'>
 					<p className='redirect-info'>Already Have An Account? Login</p>
-					<Link to='/signup'>
+					<Link to='/login'>
 						<button className='btn signup-login redirect-btn'>Login</button>
 					</Link>
 				</div>
