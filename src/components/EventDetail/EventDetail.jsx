@@ -101,7 +101,11 @@ function EventDetail() {
 	//display the event detail in a card
 	return (
 		<div className='details-container'>
-			<button onClick={() => history.goBack()}>←</button>
+			<button
+				className='btn detail-btn backButton'
+				onClick={() => history.goBack()}>
+				←
+			</button>
 			<div className='details-card'>
 				<div className='images-container'>
 					<img
