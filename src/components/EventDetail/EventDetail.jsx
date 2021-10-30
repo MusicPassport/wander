@@ -101,55 +101,67 @@ function EventDetail() {
 	//display the event detail in a card
 	return (
 		<div className='details-container'>
-			<button onClick={()=> history.goBack()}>←</button>
-			<div className='images-container'>
-				<img
-					className='event-img'
-					src={eventDetail.images[1].url}
-					alt={`${eventDetail.name} + promo`}></img>
-			</div>
-			<div className='info-container'>
-				<h2>{eventDetail.name}</h2>
-				<p className='start'>Start Date: {eventDetail.dates.start.localDate}</p>
-				<div className='detail-btns'>
-					<div>
-						{select ? (
-							<Link to='/dashboard/'>
-								<button className='btn detail-btn view'>
-									Go To Dashboard
-								</button>
-							</Link>
-						) : (
-							<>
-								<button
-									className='btn detail-btn bucket'
-									id='viewers'
-									onClick={addEvent}>
-									Add To BucketList
-								</button>
-								<button
-									className='btn detail-btn seen'
-									id='attendees'
-									onClick={addEvent}>
-									Add To Attending
-								</button>
-							</>
-						)}
-					</div>
-					<a target='_blank' href={eventDetail.url} rel='noreferrer'>
-						<button className='btn detail-btn tickets'>View Tickets</button>
-					</a>
+			<button onClick={() => history.goBack()}>←</button>
+			<div className='details-card'>
+				<div className='images-container'>
+					<img
+						className='event-img'
+						src={eventDetail.images[3].url}
+						alt={`${eventDetail.name} + promo`}></img>
 				</div>
-				<h3>Seat Map</h3>
-				{eventDetail.seatmap ? (
-					<div className='seat-map'>
+				<div className='info-container'>
+					<h2 className='event-details-title'>{eventDetail.name}</h2>
+					<p className='start'>
+						Event Start Date: {eventDetail.dates.start.localDate}
+					</p>
+					<p className='start end'>
+						Sales End:{eventDetail.sales.public.endDateTime.substr(0, 10)}
+					</p>
+					<div className='detail-btns'>
+						<div>
+							{select ? (
+								<Link to='/dashboard/'>
+									<button className='btn detail-btn view'>
+										Go To Dashboard
+									</button>
+								</Link>
+							) : (
+								<>
+									<button
+										className='btn detail-btn bucket'
+										id='viewers'
+										onClick={addEvent}>
+										Add To BucketList
+									</button>
+									<button
+										className='btn detail-btn seen'
+										id='attendees'
+										onClick={addEvent}>
+										Add To Attending
+									</button>
+								</>
+							)}
+						</div>
+						<a target='_blank' href={eventDetail.url} rel='noreferrer'>
+							<button className='btn detail-btn tickets'>View Tickets</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			{eventDetail.seatmap ? (
+				<div className='seat-map details-card'>
+					<div className='seat'>
+						<h3 className='seat-text'>Seat Map</h3>
+					</div>
+					<div className='seat-image'>
 						<img
 							className='event-img seat-img'
 							src={eventDetail.seatmap.staticUrl}
 							alt={`${eventDetail.name} + seat map`}></img>
 					</div>
-				) : null}
-			</div>
+				</div>
+			) : null}
 		</div>
 	);
 }

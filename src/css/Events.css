@@ -1,4 +1,68 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;0,800;0,900;1,100;1,500;1,600;1,900&family=Zen+Kurenaido&display=swap");
+=======
+.details-container {
+  margin: 50px auto;
+}
+.details-card {
+  /* border: 1px solid hotpink; */
+  height: 500px;
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px #f5487f;;
+
+}
+
+.event-img {
+  object-fit: cover;
+  height:100%;
+  width:100%;
+  border-right: 5px solid #f5487f;;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+
+.info-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-details-title {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f5487f;
+  /* background-color: hotpink; */
+  color:white;
+  width:100%;
+}
+
+.start {
+  margin-top: 10px;
+  background-color: rgba(245,245,245,1);
+  color:rgba(245, 72, 127, 1);
+}
+
+
+.end {
+  background-color: rgb(5, 16, 49);
+}
+
+.seat-map {
+  margin-top: 100px;
+}
+
+.seat-image-container {
+    width:70%;
+    height:90%;
+}
+
+>>>>>>> cdf6f21 (Style event detail)
 @media (min-width: 600px) {
   .event-list {
     display: flex;
